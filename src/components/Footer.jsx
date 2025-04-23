@@ -42,15 +42,12 @@ export default function Footer() {
             <a href="https://www.linkedin.com/in/ahmad-husain-09312325b/" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-[#c744ec] transition">
               <FaLinkedin />
             </a>
-            <a href="https://www.instagram.com/__ahmad__oo7/" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-[#c744ec] transition">
-              <FaInstagram />
-            </a>
           </div>
         </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-gray-600 mt-8 pt-4 text-center text-sm text-gray-400">
+      <div className="border-t border-gray-800 mt-8 pt-4 text-center text-sm text-gray-400">
         © 2025 Ahmad Husain. All rights reserved.
       </div>
     </footer>

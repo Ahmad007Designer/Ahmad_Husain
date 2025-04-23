@@ -17,7 +17,20 @@ export default function Navbar() {
       data-aos="fade-up"
       data-aos-delay="300"
     >
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+      {/* Custom styles for large screen padding */}
+      <style>
+        {`
+          @media (min-width: 1024px) {
+            .lg\\:custom-padding {
+              padding-left: 12.1rem; /* 200px */
+              padding-right: 10rem;  /* 152px */
+            }
+          }
+        `}
+      </style>
+
+      <div className="w-full mx-auto py-4 px-6 sm:px-10 lg:custom-padding flex items-center justify-between">
+        {/* Logo */}
         <a
           href="#home"
           className="text-3xl font-bold italic text-transparent bg-clip-text 

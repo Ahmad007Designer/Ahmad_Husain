@@ -8,7 +8,7 @@ import project6 from "/project6.png";
 
 const ProjectCard = ({ image, title, description, link }) => {
   return (
-    <article className="relative max-w-sm bg-black rounded overflow-hidden shadow-lg group">
+    <article className="relative w-full bg-black rounded overflow-hidden shadow-lg group">
       <div
         className="absolute z-0 w-40 h-40 sm:w-60 sm:h-60 bg-[#cd3cf5] rounded-full blur-3xl
             opacity-50 -top-5 left-10"
@@ -91,33 +91,41 @@ export default function Projects() {
   ];
 
   return (
-    <main className="bg-black pt-10 pb-16" id="projects">
-      <section data-aos="fade-up" data-aos-delay="300">
-        <header className="text-center">
-          <h1 className="text-3xl text-white sm:text-4xl font-bold mb-4">
-            My <span className="text-purple-400">Projects</span>
-          </h1>
-          <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
-            Here’s a showcase of some of the projects I’ve built using React, MERN Stack, Flutter, Machine Learning, and more.
-          </p>
-        </header>
-      </section>
+    <main className="bg-black pt-10 pb-16 px-4" id="projects">
+      <div className="max-w-7xl mx-auto">
+        <section data-aos="fade-up" data-aos-delay="300">
+          <header className="text-center">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+              <span className="text-white">My </span>
+              <span className="text-purple-400">Projects</span>
+            </h1>
+            <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
+              Here’s a showcase of some of the projects I’ve built using React,
+              MERN Stack, Flutter, Machine Learning, and more.
+            </p>
+          </header>
+        </section>
 
-      <section
-        data-aos="fade-up"
-        data-aos-delay="500"
-        className="flex flex-wrap gap-6 justify-center mt-8"
-      >
-        {listProjects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            image={project.image}
-            title={project.title}
-            description={project.description}
-            link={project.link}
-          />
-        ))}
-      </section>
+        <section
+          data-aos="fade-up"
+          data-aos-delay="500"
+          className="flex flex-wrap justify-center gap-6 mt-8"
+        >
+          {listProjects.map((project, index) => (
+            <div
+              key={index}
+              className="w-full sm:w-[45%] md:w-[30%] lg:w-[28%] xl:w-[22%] flex justify-center"
+            >
+              <ProjectCard
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+              />
+            </div>
+          ))}
+        </section>
+      </div>
     </main>
   );
 }

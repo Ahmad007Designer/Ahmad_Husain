@@ -55,8 +55,11 @@ export default function Contact() {
         </aside>
 
         {/* Right Side Contact Form */}
-        <section className="w-full md:w-1/2 p-8 bg-gray-900">
-          <h2 className="text-4xl font-bold text-white text-center mb-6">Contact Us</h2>
+        <section className="w-full md:w-1/2 p-8 bg-black">
+          <h2 className="text-4xl font-bold text-white text-center mb-6">
+            Contact <span className="text-purple-400">Us</span>
+          </h2>
+
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div>
               <label htmlFor="user_name" className="block text-gray-300 mb-1">Name</label>
