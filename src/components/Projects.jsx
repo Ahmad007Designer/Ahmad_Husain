@@ -26,7 +26,7 @@ const ProjectCard = ({ image, title, description, link }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="absolute h-[202px] inset-0 flex items-center justify-center bg-purple-800 bg-opacity-50 opacity-0 
-            group-hover:opacity-100 transition-opacity duration-300"
+              group-hover:opacity-100 transition-opacity duration-300"
           >
             <button className="bg-white font-medium text-black py-2 px-4 rounded-3xl shadow hover:text-white hover:bg-[#2879d5]">
               Live Preview
@@ -109,20 +109,16 @@ export default function Projects() {
         <section
           data-aos="fade-up"
           data-aos-delay="500"
-          className="flex flex-wrap justify-center gap-6 mt-8"
+          className="grid gap-6 mt-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
           {listProjects.map((project, index) => (
-            <div
+            <ProjectCard
               key={index}
-              className="w-full sm:w-[45%] md:w-[30%] lg:w-[28%] xl:w-[22%] flex justify-center"
-            >
-              <ProjectCard
-                image={project.image}
-                title={project.title}
-                description={project.description}
-                link={project.link}
-              />
-            </div>
+              image={project.image}
+              title={project.title}
+              description={project.description}
+              link={project.link}
+            />
           ))}
         </section>
       </div>
