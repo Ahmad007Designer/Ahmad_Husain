@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -49,12 +50,13 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <button
+          <a
+            href="#contact"
             className="ml-4 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 
               text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300 shadow-md"
           >
             Contact
-          </button>
+          </a>
         </nav>
       </div>
 
@@ -74,12 +76,13 @@ export default function Navbar() {
             {link.name}
           </a>
         ))}
-        <button
+        <a
+          href="#contact"
           className="bg-white text-[#801b9c] font-semibold py-2 px-6 rounded-full text-lg hover:bg-gray-200 transition duration-300"
           onClick={() => setIsOpen(false)}
         >
           Contact
-        </button>
+        </a>
       </div>
     </header>
   );

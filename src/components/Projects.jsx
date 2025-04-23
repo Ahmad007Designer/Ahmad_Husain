@@ -8,7 +8,7 @@ import project6 from "/project6.png";
 
 const ProjectCard = ({ image, title, description, link }) => {
   return (
-    <article className="relative max-w-sm bg-gray-800 rounded overflow-hidden shadow-lg group">
+    <article className="relative max-w-sm bg-black rounded overflow-hidden shadow-lg group">
       <div
         className="absolute z-0 w-40 h-40 sm:w-60 sm:h-60 bg-[#cd3cf5] rounded-full blur-3xl
             opacity-50 -top-5 left-10"
@@ -49,59 +49,64 @@ export default function Projects() {
     {
       image: project1,
       title: "Food Delivery Website",
-      description: "A full-stack food delivery web app built using the MERN stack (MongoDB, Express, React, Node.js). Features include dynamic menu browsing, cart management, user authentication, and seamless order placement.",
+      description:
+        "A full-stack food delivery app using MERN with user authentication, real-time order tracking, and admin dashboard.",
       link: "https://github.com/Ahmad007Designer/Fast-Food-APP",
     },
-    
     {
       image: project2,
       title: "Movie Recommendation System",
-      description: "A movie recommendation system that suggests movies based on user preferences and ratings. Built using Python and Flask, it utilizes machine learning algorithms to provide personalized recommendations.",
+      description:
+        "Personalized movie suggestions using ML algorithms based on content similarity and user preferences.",
       link: "https://github.com/Ahmad007Designer/Movie_Recommend_System_ML",
     },
     {
       image: project3,
-      title: "Data Cleaner & Data Analyzer",
-      description: "A data cleaning and analysis tool that helps users preprocess and analyze datasets. Built using Python, it provides functionalities for data visualization, cleaning, and statistical analysis.",
+      title: "Data Cleaner & Analyzer",
+      description:
+        "Interactive platform to clean, visualize, and analyze datasets with ease. Built using Python & Streamlit.",
       link: "https://github.com/Ahmad007Designer/promtly_ai_marketing",
     },
     {
       image: project4,
       title: "Calculator",
-      description: "A simple calculator application built using Flutter. It supports basic arithmetic operations and has a user-friendly interface.",
-    
+      description:
+        "A cross-platform calculator app made with Flutter, performing all basic operations with responsive UI.",
       link: "https://github.com/Ahmad007Designer/Flutter-Calculator",
     },
     {
       image: project5,
       title: "Blogify App",
-      description: "A blogging platform that allows users to create, read, update, and delete blog posts. Built using React, Mongodb and Node.js, it features user authentication and a responsive design.",
+      description:
+        "A blogging platform built with MERN, enabling users to post, edit, and delete blogs with secure login.",
       link: "https://github.com/Ahmad007Designer/Blogify-APP",
     },
     {
       image: project6,
       title: "Crime Rate Prediction",
-      description: "A crime rate prediction system that uses machine learning algorithms to predict crime rates based on historical data. Built using Python and Flask, it provides visualizations and insights into crime trends.",
+      description:
+        "A ML model to forecast crime trends using historical data, featuring visual insights and Flask backend.",
       link: "https://github.com/Ahmad007Designer/Crime-Rate-Predicction",
     },
   ];
+
   return (
-    <main className="p-4" id="projects" >
+    <main className="bg-black pt-10 pb-16" id="projects">
       <section data-aos="fade-up" data-aos-delay="300">
         <header className="text-center">
-          <h1 className="text-3xl text-white sm:text-4xl font-bold mb-6">
+          <h1 className="text-3xl text-white sm:text-4xl font-bold mb-4">
             My <span className="text-purple-400">Projects</span>
           </h1>
-          <p className="text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum,
-            veniam?
+          <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
+            Here’s a showcase of some of the projects I’ve built using React, MERN Stack, Flutter, Machine Learning, and more.
           </p>
         </header>
       </section>
+
       <section
         data-aos="fade-up"
         data-aos-delay="500"
-        className="flex flex-wrap gap-4 justify-center mt-6"
+        className="flex flex-wrap gap-6 justify-center mt-8"
       >
         {listProjects.map((project, index) => (
           <ProjectCard
